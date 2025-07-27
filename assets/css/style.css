@@ -1,105 +1,235 @@
-/* 🌙 Dark Mode & Variables */
+/* 🌙 Theme Variables */
 :root {
-    --primary: #007acc;
-    --secondary: #005f99;
-    --bg-light: #f9fafb;
-    --bg-dark: #121212;
-    --text-light: #333;
-    --text-dark: #f0f0f0;
-    --transition: 0.3s ease;
+  --primary: #007acc;
+  --secondary: #005f99;
+  --bg-light: #f9fafb;
+  --bg-dark: #121212;
+  --text-light: #333;
+  --text-dark: #f0f0f0;
+  --transition: 0.3s ease-in-out;
 }
+
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background: var(--bg-light);
-    color: var(--text-light);
-    transition: background var(--transition), color var(--transition);
-    line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background var(--transition), color var(--transition);
+  line-height: 1.6;
 }
-body.dark-mode { background: var(--bg-dark); color: var(--text-dark); }
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* ✅ Progress Bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--primary);
+  width: 0%;
+  z-index: 1000;
+  transition: width 0.2s ease-out;
+}
 
 /* ✅ Header */
 header {
-    text-align: center;
-    background: var(--primary);
-    color: white;
-    padding: 80px 20px;
-    position: relative;
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: var(--primary);
+  color: white;
+  position: relative;
 }
-header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-header h3 { font-weight: 400; margin-top: 5px; font-size: 1.2rem; }
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
 
 /* ✅ Dark Mode Button */
 .dark-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: white;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform var(--transition);
 }
-body.dark-mode .dark-toggle { background: #333; color: white; }
+.dark-toggle:hover {
+  transform: scale(1.1);
+}
+body.dark-mode .dark-toggle {
+  background: #333;
+  color: white;
+}
+
+/* ✅ Social Icons */
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  transition: color var(--transition);
+}
+.social-icons a:hover {
+  color: #ffdd57;
+}
 
 /* ✅ Sections */
 section {
-    max-width: 950px;
-    margin: 30px auto;
-    padding: 40px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-    transition: transform var(--transition), background var(--transition);
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: transform var(--transition), background var(--transition);
 }
-body.dark-mode section { background: #1e1e1e; }
-section:hover { transform: translateY(-3px); }
-h2 {
-    color: var(--primary);
-    text-align: center;
-    margin-bottom: 20px;
+section:hover {
+  transform: translateY(-3px);
+}
+body.dark-mode section {
+  background: #1e1e1e;
 }
 
-/* ✅ Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
-    text-align: center;
+h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-weight: 700;
 }
-.skills-grid i { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+
+/* ✅ Skills */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+.skills-list li {
+  padding: 8px 0;
+}
 
 /* ✅ Timeline */
-.timeline { border-left: 2px solid #ddd; padding-left: 20px; }
+.timeline {
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+}
 .timeline-item {
-    margin-bottom: 20px;
-    position: relative;
+  margin-bottom: 20px;
+  position: relative;
 }
 .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -7px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    background: var(--primary);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+/* ✅ CTA Section */
+.cta {
+  text-align: center;
+  background: var(--primary);
+  color: white;
+}
+.cta h2 {
+  color: white;
+}
+.cta p {
+  margin: 10px auto 20px;
+  font-size: 1.1rem;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  background: white;
+  color: var(--primary);
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+.btn-primary:hover {
+  background: #ffdd57;
+  color: #333;
 }
 
 /* ✅ Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--primary);
-    color: white;
-    font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+}
+
+/* ✅ Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: background var(--transition), transform var(--transition);
+}
+#backToTop:hover {
+  background: var(--secondary);
+  transform: scale(1.1);
+}
+
+/* ✅ Skip Link (Accessibility) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: top 0.3s;
+  z-index: 10000;
+}
+.skip-link:focus {
+  top: 10px;
 }
 
 /* ✅ Responsive */
 @media (max-width: 700px) {
-    header h1 { font-size: 2rem; }
-    section { padding: 25px; margin: 15px; }
+  header h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 25px;
+    margin: 15px;
+  }
 }
