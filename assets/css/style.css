@@ -1,0 +1,105 @@
+/* 🌙 Dark Mode & Variables */
+:root {
+    --primary: #007acc;
+    --secondary: #005f99;
+    --bg-light: #f9fafb;
+    --bg-dark: #121212;
+    --text-light: #333;
+    --text-dark: #f0f0f0;
+    --transition: 0.3s ease;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background var(--transition), color var(--transition);
+    line-height: 1.6;
+}
+body.dark-mode { background: var(--bg-dark); color: var(--text-dark); }
+
+/* ✅ Header */
+header {
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    padding: 80px 20px;
+    position: relative;
+}
+header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+header h3 { font-weight: 400; margin-top: 5px; font-size: 1.2rem; }
+
+/* ✅ Dark Mode Button */
+.dark-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+body.dark-mode .dark-toggle { background: #333; color: white; }
+
+/* ✅ Sections */
+section {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: transform var(--transition), background var(--transition);
+}
+body.dark-mode section { background: #1e1e1e; }
+section:hover { transform: translateY(-3px); }
+h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ✅ Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+.skills-grid i { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+
+/* ✅ Timeline */
+.timeline { border-left: 2px solid #ddd; padding-left: 20px; }
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+/* ✅ Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 700px) {
+    header h1 { font-size: 2rem; }
+    section { padding: 25px; margin: 15px; }
+}
