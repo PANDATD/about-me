@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://pandatd.github.io/sitemap.xml
