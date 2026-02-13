@@ -1,0 +1,531 @@
+<style>
+  /* =========================
+   BASE
+========================= */
+  .academic-page {
+    background: #fafafa;
+    padding: clamp(80px, 7vw, 100px) 5%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* =========================
+   TITLES
+========================= */
+  .academic-title {
+    font-size: clamp(30px, 3vw, 44px);
+    font-weight: 700;
+    color: #8b0000;
+    margin: 0 0 clamp(60px, 5vw, 70px);
+    letter-spacing: -.3px;
+  }
+
+  /* =========================
+   GRID
+========================= */
+  .academic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 320px));
+    gap: clamp(28px, 3vw, 40px);
+    max-width: 1500px;
+    margin: 0 auto clamp(90px, 8vw, 120px);
+    justify-content: center;
+  }
+
+  /* =========================
+   CARD
+========================= */
+  .academic-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(139, 0, 0, .35);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+
+  .academic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .06);
+  }
+
+  /* =========================
+   IMAGE
+========================= */
+  .academic-image {
+    aspect-ratio: 1/1;
+    background: #eee;
+  }
+
+  .academic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* =========================
+   CONTENT
+========================= */
+  .academic-content {
+    padding: 28px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .academic-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #8b0000;
+    margin: 0 0 12px;
+    line-height: 1.35;
+  }
+
+  .academic-content p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin: 0;
+    color: #333;
+    max-width: 30ch;
+  }
+
+  /* =========================
+   DIVIDER
+========================= */
+  .section-divider {
+    width: 72px;
+    height: 3px;
+    background: #fafafa;
+    margin: 0 auto clamp(80px, 7vw, 100px);
+    border-radius: 2px;
+  }
+
+  /* =========================
+   MOBILE TWEAK
+========================= */
+  @media (max-width:768px) {
+    .academic-page {
+      padding: clamp(60px, 8vw, 80px) 6%;
+    }
+  }
+</style>
+
+<section class="academic-page">
+
+  <h2 class="academic-title">Conference Program Committee</h2>
+
+  <div class="academic-grid">
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/01/anurag-mairal_profilephoto.jpg" width="600" height="600" alt="Prof. Anurag Mairal - Adjunct Professor of Medicine, Stanford University" loading="eager" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Prof. Anurag Mairal</h3>
+        <p>Adjunct Professor of Medicine, Stanford University, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/01/photocache.80045.jpg" width="600" height="600" alt="Prof. James Ehrlich - Director of Compassionate Sustainability, Stanford University" loading="eager" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Prof. James Ehrlich</h3>
+        <p>Director of Compassionate Sustainability, Stanford University, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/01/photocache.16922.jpg" width="600" height="600" alt="Prof. Robson Capasso - Stanford Center for Clinical Research" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Prof. Robson Capasso</h3>
+        <p>Professor, Stanford Center for Clinical Research, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/01/Screenshot-2026-01-26-at-11.04.06-AM.png" width="600" height="600" alt="Dr. Dinsha Mistree - Hoover Institution, Stanford University" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Dr. Dinsha Mistree</h3>
+        <p>Stanford-affiliated and Research Fellow, Hoover Institution, Stanford University, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/02/1681961798265.jpg" width="600" height="600" alt="Dr. Jagjit Nanda - SLAC National Accelerator Laboratory" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Dr. Jagjit Nanda</h3>
+        <p>Distinguished Scientist, SLAC National Accelerator Laboratory, US DOE Laboratory, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/02/suresh-jain-460x460.jpg" width="600" height="600" alt="Suresh Jain - President and COO at Acylin Therapeutics Inc" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Suresh Jain</h3>
+        <p>President and COO at Acylin Therapeutics Inc, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/02/2025-0326-Hudson-Headshots-0209-16-9-460x460.avif" width="600" height="600" alt="Mr. Bill Drexel - Senior Fellow at the Hudson Institute" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Mr. Bill Drexel</h3>
+        <p>Senior Fellow at the Hudson Institute, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/02/yashodhan-agalgaonkar.webp" width="600" height="600" alt="Dr. Yashodhan Agalgaonkar - Principal Researcher, National Lab of the Rockies" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Dr. Yashodhan Agalgaonkar</h3>
+        <p>Principal Researcher, National Lab of the Rockies (Formerly NREL), US DOE Laboratory, USA</p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="section-divider"></div>
+
+  <h2 class="academic-title">Organizing Committee</h2>
+
+  <div class="academic-grid">
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/02/Yeloji.webp" width="600" height="600" alt="Mr. Raj Kuppa - Director of Machine Learning and High Performance Computing at KLA" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Mr. Raj Kuppa</h3>
+        <p>Director of Machine Learning and High Performance Computing at KLA, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/02/Yeloji.webp" width="600" height="600" alt="Dr. Yelloji-Rao Mirajkar - Hindu University of America" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Dr. Yelloji-Rao Mirajkar</h3>
+        <p>International Convener (GIST), Board of Director, Hindu University of America, USA</p>
+      </div>
+    </article>
+
+    <article class="academic-card">
+      <div class="academic-image">
+        <img src="https://gsiforum.org/wp-content/uploads/2026/02/Aravind_HUA_Profile-1024x873-1-460x460.jpg" width="600" height="600" alt="Mr. Aravind Swami - Vice President, Hindu University of America" loading="lazy" decoding="async">
+      </div>
+      <div class="academic-content">
+        <h3>Mr. Aravind Swami</h3>
+        <p>Vice President, Hindu University of America, USA</p>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+<style>
+  /* =========================
+   SECTION
+========================= */
+  .wwd-sec {
+    width: 100%;
+    padding: 70px 5%;
+    background: #fafafa;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* =========================
+   HEADINGS
+========================= */
+  .wwd-title {
+    font-size: clamp(28px, 2.8vw, 44px);
+    color: #8b0000;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .wwd-sub {
+    font-size: clamp(14px, 1.1vw, 18px);
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    line-height: 1.7;
+    color: #222;
+  }
+
+  /* =========================
+   CARD WRAPPER
+========================= */
+  .wwd-wrap {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  /* =========================
+   CARD
+========================= */
+  .wwd-card {
+    flex: 1 1 280px;
+    max-width: 360px;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 14px;
+    border: 1px solid #8b0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .2s ease;
+  }
+
+  .wwd-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+  }
+
+  /* =========================
+   ICON
+========================= */
+  .wwd-icon {
+    width: 55px;
+    height: 55px;
+    background: #8b0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 22px;
+  }
+
+  /* =========================
+   CARD TITLE
+========================= */
+  .wwd-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #8b0000;
+    margin-bottom: 14px;
+  }
+
+  /* =========================
+   CARD TEXT
+========================= */
+  .wwd-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+    max-width: 36ch;
+  }
+
+  /* =========================
+   MOBILE
+========================= */
+  @media (max-width:768px) {
+    .wwd-sec {
+      padding: 60px 6%;
+    }
+  }
+</style>
+
+<section class="wwd-sec">
+
+  <h2 class="wwd-title">What We Do</h2>
+
+  <p class="wwd-sub">
+    Our process is designed to systematically identify, support, and scale impactful innovations.
+  </p>
+
+  <div class="wwd-wrap">
+
+    <div class="wwd-card">
+      <div class="wwd-icon">»</div>
+      <h3>Research & Discovery</h3>
+      <p>
+        Identify promising innovations and key ecosystem players across the Global Science.
+      </p>
+    </div>
+
+    <div class="wwd-card">
+      <div class="wwd-icon">»</div>
+      <h3>Strategic Partnerships</h3>
+      <p>
+        Connect Innovators with mentors, resources, and a network of peers to foster collaboration.
+      </p>
+    </div>
+
+    <div class="wwd-card">
+      <div class="wwd-icon">»</div>
+      <h3>Ecosystem Building</h3>
+      <p>
+        Forge alliances with investors, corporations, and policymakers to scale solutions.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+  /* =========================
+   CONTACT SECTION
+========================= */
+  .contact-section {
+    width: 100%;
+    background: #fafafa;
+    padding: 120px 5%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* TITLE */
+  .contact-title {
+    font-size: clamp(30px, 3vw, 44px);
+    color: #8b0000;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  /* SUBTEXT */
+  .contact-sub {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .contact-email {
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 60px;
+  }
+
+  /* ACCORDION WRAPPER */
+  .contact-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  /* ACCORDION ITEMS */
+  .contact-accordion details {
+    border-top: 1px solid #ccc;
+    padding: 18px 0;
+  }
+
+  .contact-accordion details:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .contact-accordion summary {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
+  }
+
+  .contact-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* ARROW */
+  .contact-accordion summary::after {
+    content: "+";
+    font-size: 18px;
+    transition: transform .2s ease;
+  }
+
+  .contact-accordion details[open] summary::after {
+    content: "−";
+  }
+
+  /* CONTENT */
+  .contact-accordion p {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    max-width: 70ch;
+  }
+
+  @media (max-width:768px) {
+    .contact-section {
+      padding: 100px 6%;
+    }
+  }
+</style>
+
+<section class="contact-section">
+
+  <h1 class="contact-title">Contact Us</h1>
+
+  <p class="contact-sub">
+    We’d love to hear from you. Find the right contact for your inquiry below.
+  </p>
+
+  <p class="contact-email">
+    For any queries please contact us at <strong>secretary@gsiforum.org</strong>
+  </p>
+
+  <div class="contact-accordion">
+
+    <details open>
+      <summary>General</summary>
+      <p>
+        For general questions regarding the conference, registration details, logistics, or any additional information.
+      </p>
+    </details>
+
+    <details>
+      <summary>Partnerships</summary>
+      <p>
+        For sponsorship opportunities, strategic collaborations, or institutional partnerships related to the forum.
+      </p>
+    </details>
+
+    <details>
+      <summary>Speakers & Programs</summary>
+      <p>
+        For speaker proposals, agenda discussions, program contributions, and related inquiries.
+      </p>
+    </details>
+
+    <details>
+      <summary>Media & Press</summary>
+      <p>
+        For press releases, interview requests, media coverage, and official communication matters.
+      </p>
+    </details>
+
+  </div>
+
+</section>
